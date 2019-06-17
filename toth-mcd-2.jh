@@ -1,0 +1,22 @@
+enum TypeDocument{
+COURSES,
+EXERCISE,
+JUSTIF
+}
+
+entity Document {
+	id Long required
+    title String,
+    mimeType String,
+    typeDoc TypeDocument 
+}
+
+entity CCP{
+id Long required
+title String,
+desc String,
+}
+
+relationship ManyToMany{
+Document to CCP
+}
