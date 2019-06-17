@@ -1,0 +1,37 @@
+{
+    "name": "Document",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mimeType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "typeDoc",
+            "fieldType": "TypeDocument",
+            "fieldValues": "COURSES,EXERCISE,JUSTIF"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "cCP",
+            "otherEntityRelationshipName": "document",
+            "relationshipName": "cCP",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190617085356",
+    "entityTableName": "document",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
